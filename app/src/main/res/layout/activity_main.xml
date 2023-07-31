@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <!-- AdSize.BANNER
+    1 -> AdSize.LARGE_BANNER
+    2 -> AdSize.SMART_BANNER
+    3 -> AdSize.FULL_BANNER
+    4 -> AdSize.MEDIUM_RECTANGLE
+    else -> AdSize.LEADERBOARD-->
+
+ <TextView
+     android:id="@+id/tvBanner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintTop_toTopOf="parent"
+     android:text="Banner Ad"
+     android:layout_margin="10dp"
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:layout_constraintLeft_toLeftOf="parent"
+       ads:layout_constraintTop_toBottomOf="@+id/tvBanner"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+ <TextView
+     android:id="@+id/tvLargeBanner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/adViewBanner"
+     app:layout_constraintRight_toRightOf="parent"
+     android:text="Large Banner Ad"
+     android:layout_margin="10dp"
+
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewLargeBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/tvLargeBanner"
+        ads:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+ <TextView
+     android:id="@+id/tvSmartBanner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/adViewLargeBanner"
+     app:layout_constraintRight_toRightOf="parent"
+     android:text="Smart Banner Ad"
+     android:layout_margin="10dp"
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewSmartBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/tvSmartBanner"
+        ads:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+ <TextView
+     android:id="@+id/tvFullBanner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/adViewSmartBanner"
+     app:layout_constraintRight_toRightOf="parent"
+     android:text="Full Banner Ad"
+     android:layout_margin="10dp"
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewFullBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/tvFullBanner"
+        ads:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+ <TextView
+     android:id="@+id/tvMediumRectangle"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/adViewFullBanner"
+     app:layout_constraintRight_toRightOf="parent"
+     android:text="Medium Rectangle Ad"
+     android:layout_margin="10dp"
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewMediumRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/tvMediumRectangle"
+        ads:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="MEDIUM_RECTANGLE"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+ <TextView
+     android:id="@+id/tvLeaderboard"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/adViewMediumRectangle"
+     app:layout_constraintRight_toRightOf="parent"
+     android:text="Medium Rectangle Ad"
+     android:layout_margin="10dp"
+     android:textSize="18dp"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/tvLeaderboard"
+        ads:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="LEADERBOARD"
+        ads:adUnitId="@string/unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
