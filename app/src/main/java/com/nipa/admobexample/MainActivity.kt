@@ -2,7 +2,10 @@ package com.nipa.admobexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.nipa.admobexample.databinding.ActivityMainBinding
 
@@ -22,5 +25,18 @@ class MainActivity : AppCompatActivity() {
         binding.adViewLeaderboard.loadAd(adRequest)
         binding.adViewMediumRectangle.loadAd(adRequest)
         binding.adViewSmartBanner.loadAd(adRequest)
+
+        binding.adViewBanner.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+
+                // Ad successfully loaded. You can show the ad here or take any other action.
+            }
+
+            override fun onAdFailedToLoad(error: LoadAdError) {
+
+                // Ad failed to load. You can handle the failure here.
+                Log.d("Activity",error.toString())
+            }
+        }
     }
 }
